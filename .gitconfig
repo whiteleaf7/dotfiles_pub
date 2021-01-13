@@ -1,0 +1,29 @@
+[user]
+  name = whiteleaf7
+  email = 2nd.leaf@gmail.com
+[core]
+  editor = nvim -u ~/.config/nvim/simple_init.vim
+  quotepath = false
+  precomposeunicode = true
+[push]
+  default = current
+[tig "bind"]
+  generic = g move-first-line
+  generic = G move-last-line
+[alias]
+  fix = commit --amend
+  st = status
+  co = checkout
+  ch = checkout
+  br = branch
+  difff = diff --word-diff
+  gr = log --graph --date=short --decorate=short --pretty=format:'%Cgreen%h %Creset%cd %Cblue%cn %Cred%d %Creset%s'
+  see = browse
+  pr = pull-request -b develop
+  po = push origin
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[pull]
+  rebase = false

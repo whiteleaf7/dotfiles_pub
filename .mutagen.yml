@@ -1,0 +1,4 @@
+sync:
+  defaults:
+    watch:
+      pollingInterval: 10

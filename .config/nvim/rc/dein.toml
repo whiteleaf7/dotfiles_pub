@@ -1,0 +1,388 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+# ブランチやタグを指定したいとき
+# [[plugins]] repo = 'delphinus35/typescript-vim'
+# rev  = 'colorize-template-strings'
+#
+# # 特定の条件で読み込みたいとき
+# [[plugins]]
+# repo = 'elzr/vim-json'
+# if   = '''! has('kaoriya')'''
+#
+# # 依存関係を指定したいとき
+# [[plugins]]
+# repo    = 'vim-airline/vim-airline'
+# depends = ['vim-airline-themes']
+# hook_add = '''
+#   source ~/.config/vim/rc/vim-airline.vim
+# '''
+# 
+# # 依存関係を指定したからと言って、自動でインストールはされない（ここは NeoBundle と違う）
+# [[plugins]]
+# repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = 'source ~/.config/nvim/rc/lightline.vim'
+
+[[plugins]]
+repo = 'whiteleaf7/lightline-hybrid.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+
+[[plugins]]
+repo = 'basyura/unite-converter-file-directory'
+
+[[plugins]]
+repo = 'basyura/unite-matchers'
+
+[[plugins]]
+repo = 'basyura/unite-rails'
+
+[[plugins]]
+repo = 'iyuuya/denite-rails'
+
+[[plugins]]
+repo = 'Shougo/unite.vim'
+depends = ['unite-converter-file-directory', 'unite-matchers', 'unite-rails']
+hook_add = 'source ~/.config/nvim/rc/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/vimfiler'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  let g:gitgutter_sign_added = '•'
+  let g:gitgutter_sign_modified = '•'
+  let g:gitgutter_sign_removed = '•'
+  " for reload
+  nnoremap \g :GitGutter<CR>
+'''
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/vimshell'
+hook_add = '''
+  nnoremap <silent> _v :VimShellBufferDir -popup<CR>
+  autocmd FileType vimshell call s:vimshell_my_settings()
+  let g:vimshell_popup_height = 40
+  function! s:vimshell_my_settings()
+      inoremap <silent> <C-b> <ESC>hi
+      inoremap <silent> <C-f> <ESC>li
+      " imap <silent> <C-g> <ESC>:q<CR>
+      " nmap <silent> <C-g> <ESC>:q<CR>
+      imap <silent> <ESC> <C-\><C-n>:q<CR>
+      nmap <silent> <ESC> <C-\><C-n>:q<CR>
+  endfunction
+'''
+
+[[plugins]]
+repo = 'Shougo/deol.nvim'
+hook_add = 'source ~/.config/nvim/rc/deol.vim'
+
+# [[plugins]]
+# repo = 'deoplete-plugins/deoplete-zsh'
+
+
+# アドレスの上で gx でブラウザを開く
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'thinca/vim-qfreplace'
+# quickfixウィンドウ内でrを押すと、各行のテキスト部分が別バッファに書き出される。
+# そのバッファを適当にいじって、と言っても当初の目的が置換なので:%sして、
+# :wすると各行ごとの大元のファイルが変更される。
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+# color schemes
+[[plugins]]
+repo = 'whiteleaf7/vim-hybrid'
+# [[plugins]]
+# repo = 'altercation/vim-colors-solarized'
+# [[plugins]]
+# repo = 'nanotech/jellybeans.vim'
+
+[[plugins]]
+repo = "morhetz/gruvbox"
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+hook_add = 'source ~/.config/nvim/rc/vim-rails.vim'
+
+# [[plugins]]
+# repo = 'vim-scripts/Align'
+
+# [[plugins]]
+# repo = 'rking/ag.vim'
+
+[[plugins]]
+repo = 'nicwest/vim-camelsnek'
+
+[[plugins]]
+repo = 'inkarkat/vim-SyntaxRange'
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+if = '!has("nvim")'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+if = '!has("nvim")'
+
+# [[plugins]]
+# repo = 'Shougo/deoplete.nvim'
+# on_event = 'InsertEnter'
+# hook_source = 'source ~/.config/nvim/rc/deoplete.vim'
+
+# [[plugins]]
+# repo = 'Shougo/denite.nvim'
+# hook_add = 'source ~/.config/nvim/rc/denite.vim'
+
+# [[plugins]]
+# repo = 'jsfaint/gen_tags.vim'
+# hook_add = '''
+#   let g:gen_tags#ctags_auto_gen = 1
+#   " let g:gen_tags#gtags_auto_gen = 1
+# '''
+
+# [[plugins]]
+# repo = 'tbodt/deoplete-tabnine'
+# build = './install.sh'
+
+# global コマンドが見つからないとエラーがでる
+# [[plugins]]
+# repo = 'lighttiger2505/gtags.vim'
+# hook_add = '''
+#   " Options
+#   let g:Gtags_Auto_Map = 0
+#   let g:Gtags_OpenQuickfixWindow = 1
+#   " Keymap
+#   " Show definetion of function cousor word on quickfix
+#   nmap <silent> K :<C-u>exe("Gtags ".expand('<cword>'))<CR>
+#   " Show reference of cousor word on quickfix
+#   nmap <silent> R :<C-u>exe("Gtags -r ".expand('<cword>'))<CR>
+# '''
+
+# [[plugins]]
+# repo = "ludovicchabant/vim-gutentags"
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'vim-scripts/YankRing.vim'
+
+# [[plugins]]
+# repo = 'Yggdroot/indentLine'
+# hook_add = '''
+#   " let g:indentLine_color_term = 236
+#   let g:indentLine_color_term = 237
+#   " let g:indentLine_char = '▏'
+# '''
+
+[[plugins]]
+repo = "nathanaelkane/vim-indent-guides"
+hook_add = 'source ~/.config/nvim/rc/vim-indent-guides.vim'
+
+[[plugins]]
+repo = 'AndrewRadev/switch.vim'
+
+
+# [[plugins]]
+# repo = 'delphinus35/typescript-vim'
+# rev  = 'colorize-template-strings'
+# on_source = ['tsuquyomi']
+
+[[plugins]]
+repo = 'MaxMEllon/vim-jsx-pretty'
+
+[[plugins]]
+repo  = 'leafgarland/typescript-vim'
+hook_add = 'source ~/.config/nvim/rc/typescript.vim'
+# on_ft = ['typescript']
+# hook_add = '''
+#   " autocmd FileType * setlocal formatoptions-=ro
+#   autocmd FileType * setlocal formatoptions-=r
+#   autocmd FileType * setlocal formatoptions-=o
+# '''
+
+[[plugins]]
+repo  = 'peitalin/vim-jsx-typescript'
+# on_source = ['typescript-vim']
+
+
+# [[plugins]]
+# repo = 'styled-components/vim-styled-components'
+# on_ft = ['typescript']
+
+# TS の構文チェックしてくれる奴(重い)
+[[plugins]]
+repo  = 'Quramy/tsuquyomi'
+# on_ft = ['typescript']
+
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_add = "source ~/.config/nvim/rc/vim-easymotion.vim"
+
+
+[[plugins]]
+repo = 'elzr/vim-json'
+hook_add = '''
+  let g:vim_json_syntax_conceal = 0
+'''
+
+[[plugins]]
+repo = 'kevinoid/vim-jsonc'
+
+[[plugins]]
+repo = 'ConradIrwin/vim-bracketed-paste'
+
+[[plugins]]
+repo = 'chr4/nginx.vim'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+# https://qiita.com/73cha/items/aecb84af18eed9646f1c
+[[plugins]]
+repo     = 'prettier/vim-prettier'
+build    = 'npm install'
+on_ft    = ['javascript']
+hook_add = '''
+  " @formatアノテーションを持ったファイルの自動フォーマットを無効にする
+  let g:prettier#autoformat = 0
+
+  " Prettierのパースエラーをquickfixに表示
+  let g:prettier#quickfix_enabled = 1
+
+  autocmd BufWritePre *.js PrettierAsync
+'''
+
+[[plugins]]
+repo = 'michaeljsmith/vim-indent-object'
+
+[[plugins]]
+repo = 'stephpy/vim-yaml'
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+
+# [[plugins]]
+# repo = 'christoomey/vim-tmux-navigator'
+# hook_add = 'source ~/.config/nvim/rc/tmux-navigator.vim'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+hook_add = 'source ~/.config/nvim/rc/emmet.vim'
+
+[[plugins]]
+repo = "neoclide/coc.nvim"
+rev = "release"
+hook_add = 'source ~/.config/nvim/rc/coc.vim'
+
+[[plugins]]
+repo = 'markstory/vim-zoomwin'
+hook_add = '''
+  " 分割したウィンドウを一時的に大きくする（トグルで元に戻す）
+  nnoremap <C-w>z :ZoomToggle<CR>
+'''
+
+
+# #a5aed9 みたいなカラーコードに色付けてくれるやつ
+[[plugins]]
+repo = "norcalli/nvim-colorizer.lua"
+hook_add = '''
+  " VIM を truecolor 対応に。highlight が guifg などに切り替わるので影響大
+  set termguicolors
+  lua require 'colorizer'.setup {
+  \   'css';
+  \   'javascript';
+  \   'vim';
+  \   'tmux';
+  \   html = {
+  \     mode = 'foreground';
+  \   }
+  \ }
+'''
+
+[[plugins]]
+repo = "vim-jp/vimdoc-ja"
+
+[[plugins]]
+repo = "unblevable/quick-scope"
+hook_add = 'source ~/.config/nvim/rc/quick-scope.vim'
+
+# [[plugins]]
+# repo = "mhinz/vim-startify"
+
+[[plugins]]
+repo = "preservim/nerdcommenter"
+hook_add = 'source ~/.config/nvim/rc/nerdcommenter.vim'
+
+[[plugins]]
+# repo = "junegunn/goyo.vim"
+repo = "whiteleaf7/goyo.vim"
+hook_add = 'source ~/.config/nvim/rc/goyo.vim'
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+hook_add = 'source ~/.config/nvim/rc/fzf.vim'
+
+# [[plugins]]
+# repo = 'alvan/vim-closetag'
+# hook_add = 'source ~/.config/nvim/rc/vim-closetag.vim'
+
+# . によるコマンド繰り返しの拡張（surround を繰り返したり）
+[[plugins]]
+repo = 'tpope/vim-repeat'
+
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+hook_add = 'source ~/.config/nvim/rc/vim-easy-align.vim'
+
+[[plugins]]
+repo = "AndrewRadev/splitjoin.vim"
+
+[[plugins]]
+repo = "Shougo/neosnippet.vim"
+hook_add = "source ~/.config/nvim/rc/neosnippet.vim"
+depends = "neosnippet-snippets"
+
+[[plugins]]
+repo = "Shougo/neosnippet-snippets"
+
+# [[plugins]]
+# repo = "Xuyuanp/scrollbar.nvim"
+# hook_add = "source ~/.config/nvim/rc/scrollbar.vim"
+
+[[plugins]]
+repo = "lambdalisue/fern.vim"
+hook_add = "source ~/.config/nvim/rc/fern.vim"
+
+
+# 無効にしたプラグインを削除するには下記を実行
+# :call dein#recache_runtimepath()

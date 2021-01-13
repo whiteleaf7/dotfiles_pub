@@ -1,0 +1,100 @@
+# # 特定のファイルタイプで読み込む
+# [[plugins]]
+# repo  = 'Quramy/tsuquyomi'
+# on_ft = ['typescript']
+# 
+# # インサートモードに入ったら読み込む
+# [[plugins]]
+# repo = 'Shougo/neocomplete.vim'
+# on_i = 1
+# 
+# [[plugins]]
+# repo   = 'Shougo/unite.vim'
+# 
+# # unite.vim を読み込んだら一緒に読み込む
+# [[plugins]]
+# repo      = 'Shougo/neomru.vim'
+# on_source = ['unite.vim']
+# 
+# # 特定のコマンドを打ったら読み込む
+# [[plugins]]
+# repo      = 'thinca/vim-prettyprint'
+# on_cmd    = ['PP', 'PrettyPrint']
+# 
+# # 特定のマッピングを使ったら読み込む
+# # 又、gvim でしか利用しない
+# [[plugins]]
+# repo   = 'thinca/vim-fontzoom'
+# on_cmd = ['Fontzoom']
+# on_map = ['<Plug>(fontzoom-']
+# gui    = 1
+
+
+[[plugins]]
+repo = 'Keithbsmiley/swift.vim'
+on_ft = ['swift']
+
+[[plugins]]
+repo = 'ujihisa/unite-colorscheme'
+
+[[plugins]]
+repo = 'kchmck/vim-coffee-script'
+on_ft = ['coffee']
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+
+[[plugins]]
+repo = 'cakebaker/scss-syntax.vim'
+on_ft = ['scss']
+
+[[plugins]]
+repo = 'posva/vim-vue'
+on_ft = ['vue']
+hook_add = '''
+  autocmd FileType vue syntax sync fromstart
+  autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+'''
+
+[[plugins]]
+repo = 'fatih/vim-go'
+on_ft = ['go']
+hook_add = 'source ~/.config/nvim/rc/vim-go.vim'
+# build = ':GoInstallBinaries'
+
+[[plugins]]
+# repo = 'pangloss/vim-javascript'
+repo = 'othree/yajs.vim'
+on_ft = ['javascript']
+
+# [[plugins]]
+# repo = 'mxw/vim-jsx'
+
+[[plugins]]
+repo = 'whiteleaf7/vim-slim'
+on_ft = ['slim']
+
+[[plugins]]
+repo = 'iamcco/markdown-preview.nvim'
+build = 'sh -c "cd app & yarn install"'
+on_ft = ['markdown', 'pandoc.markdown', 'rmd']
+
+[[plugins]]
+repo = 'thoughtbot/vim-rspec'
+on_ft = ['ruby']
+hook_add = 'source ~/.config/nvim/rc/vim-rspec.vim'
+depends = 'vim-dispatch'
+
+[[plugins]]
+repo = 'tpope/vim-dispatch'
+
+# :ColorSwatchGenerate で呼び出す
+[[plugins]]
+repo = "cocopon/colorswatch.vim"
+on_cmd = ['ColorSwatchGenerate']
+
+# :Inspecthi で、カーソル位置のカラースキーマのグループ名を取得出来る
+[[plugins]]
+repo = "cocopon/inspecthi.vim"
+on_cmd = ['Inspecthi']
