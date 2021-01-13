@@ -400,8 +400,8 @@ nnoremap <C-\> <C-w>p
 " inoremap <silent> <C-c> <ESC>:set iminsert=0<CR>
 
 " インサートモードを抜けるときのオートインデントがESCにしか割り当てられていない場合の対策
-imap <silent> <C-c> <ESC>
-imap <silent> <C-[> <ESC>
+inoremap <silent> <C-c> <ESC>
+inoremap <silent> <C-[> <ESC>
 
 " Ctrl + Shift + 矢印でウィンドウサイズを変更
 nnoremap <C-S-Left>  2<C-w><
