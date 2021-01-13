@@ -1,0 +1,6 @@
+[submodule ".config/anyenv/anyenv-install"]
+	path = .config/anyenv/anyenv-install
+	url = git@github.com:anyenv/anyenv-install.git
+[submodule ".config/tmux/plugins/tpm"]
+	path = .config/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
